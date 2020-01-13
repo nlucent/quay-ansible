@@ -1,0 +1,30 @@
+QUAY_TOKEN_NAME: QUAY-CLOUDFORMS
+docker_images:
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-postgresql
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-memcached
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-app-ui
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-app
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-embedded-ansible
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-openshift-httpd
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: cloudforms46/cfme-httpd-configmap-generator
+    tags: ['latest','*']

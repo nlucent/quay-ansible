@@ -1,0 +1,46 @@
+QUAY_TOKEN_NAME: QUAY-JBOSS
+docker_images:
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-amq-6/amq63-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-datagrid-7/datagrid71-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-datagrid-7/datagrid71-client-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-datavirt-6/datavirt63-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-datavirt-6/datavirt63-driver-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-decisionserver-6/decisionserver64-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-processserver-6/processserver64-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-eap-6/eap64-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-eap-7/eap71-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-webserver-3/webserver31-tomcat7-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: jboss-webserver-3/webserver31-tomcat8-openshift
+    tags: ['latest','*']

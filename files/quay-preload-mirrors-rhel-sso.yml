@@ -1,0 +1,10 @@
+QUAY_TOKEN_NAME: QUAY-SSO
+docker_images:
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: redhat-sso-7/sso71-openshift
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: redhat-sso-7/sso70-openshift
+    tags: ['latest','*']

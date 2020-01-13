@@ -11,10 +11,12 @@
   - name: Install postgres packages
     yum:
       name:
-        - "rh-{{ postgresql_version }}-postgresql-syspaths"
-        - "rh-{{ postgresql_version }}-postgresql-server-syspaths"
-        - "rh-{{ postgresql_version }}-postgresql-contrib-syspaths"
-        - "rh-{{ postgresql_version }}-postgresql-libs"
+        - postgresql-server
+        - postgresql-contrib
+              #- "rh-{{ postgresql_version }}-postgresql-syspaths"
+              #- "rh-{{ postgresql_version }}-postgresql-server-syspaths"
+              #- "rh-{{ postgresql_version }}-postgresql-contrib-syspaths"
+              #- "rh-{{ postgresql_version }}-postgresql-libs"
       state: latest
     when: QUAY_POSTGRESQL_DEPLOY and not QUAY_DATABASE_CONTAINERIZE
     notify: restart postgres

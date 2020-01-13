@@ -1,6 +1,5 @@
-QUAY_TOKEN_NAME: QUAY-RHEL7
 docker_images:
   - src_registry: registry.redhat.io
     trgt_registry: "{{ QUAY_ENDPOINT }}"
-    image: rhel7/etcd
-    tags: ['3.2.22', 'v3.2*']
+    image: redhat-openjdk-18/openjdk18-openshift
+    tags: ['latest','*']

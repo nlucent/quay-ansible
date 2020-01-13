@@ -1,0 +1,18 @@
+QUAY_TOKEN_NAME: QUAY-RHGS3
+docker_images:
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: rhgs3/rhgs-server-rhel7
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: rhgs3/rhgs-volmanager-rhel7
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: rhgs3/rhgs-gluster-block-prov-rhel7
+    tags: ['latest','*']
+  - src_registry: registry.redhat.io
+    trgt_registry: "{{ QUAY_ENDPOINT }}"
+    image: rhgs3/rhgs-s3-server-rhel7
+    tags: ['latest','*']

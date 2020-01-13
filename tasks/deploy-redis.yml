@@ -21,6 +21,9 @@
       published_ports: 6379:6379
       volumes: /var/lib/redis:/var/lib/redis/data:Z
       image: "registry.access.redhat.com/rhscl/redis-32-rhel7"
+      restart_policy: "{{ CONTAINER_RESTART_POLICY }}"
+      env:
+        REDIS_PASSWORD: "{{ REDIS_PASSWORD }}"
     tags:
       - quay
       - quay-config

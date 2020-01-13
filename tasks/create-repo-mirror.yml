@@ -4,7 +4,7 @@
   hosts: quay
   gather_facts: yes
   vars:
-    QUAY_AUTH_TOKEN: "{{ QUAY_AUTH_TOKEN }}"
+    #    QUAY_AUTH_TOKEN: "{{ QUAY_AUTH_TOKEN }}"
     USERNAME: "{{ UPSTREAM_REGISTRY_USERNAME }}"
     PASSWORD: "{{ UPSTREAM_REGISTRY_PASSWORD }}"
   vars_files:
@@ -15,7 +15,8 @@
         url: "http://{{ QUAY_ENDPOINT }}/api/v1/repository"
         method: POST
         headers:
-          Authorization: "Bearer {{ QUAY_AUTH_TOKEN }}"
+          #          Authorization: "Bearer {{ QUAY_AUTH_TOKEN }}"
+          Authorization: "Bearer {{ QUAY_TOKEN_NAME }}"
         validate_certs: no
         body_format: json
         status_code: 201
@@ -34,7 +35,8 @@
         url: "http://{{ QUAY_ENDPOINT }}/api/v1/repository/{{item.image}}/mirror"
         method: POST
         headers:
-          Authorization: "Bearer {{ QUAY_AUTH_TOKEN }}"
+          #Authorization: "Bearer {{ QUAY_AUTH_TOKEN }}"
+          Authorization: "Bearer {{ QUAY_TOKEN_NAME }}"
         validate_certs: no
         body_format: json
         status_code: 201

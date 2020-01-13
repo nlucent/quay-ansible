@@ -9,6 +9,7 @@ MYSQL_DATABASE: enterpriseregistrydb
 MYSQL_PASSWORD: JzxCTamgFBmHRhcGFtoPHFkrx1BH2vwQ
 MYSQL_USER: quayuser
 MYSQL_ROOT_PASSWORD: L36PrivxRB02bqOB9jtZtWiCcMsApOGn
+REDIS_PASSWORD: jsI$G823#*(G9QIJQLK_)
 QUAY_CONFIG_PASSWORD: my-secret-password
 QUAY_ROOT_DIR: /opt/quay
 QUAY_STORAGE_DIR: "{{ QUAY_ROOT_DIR }}/storage"
@@ -19,6 +20,9 @@ QUAY_HTTPS_PORT: 443
 QUAY_REDIS_DEPLOY: true
 QUAY_REDIS_CONTAINERIZE: true
 QUAY_DATABASE_CONTAINERIZE: false
+PRIVILEGED_CONTAINERS: false
+USE_HTTPS: false
+CONTAINER_RESTART_POLICY: unless-stopped
 
 # Clair needs additional proxy settings independent of of what is setup in Quay
 #QUAY_CLAIR_HTTP_PROXY: http://proxy.example.com:8080
